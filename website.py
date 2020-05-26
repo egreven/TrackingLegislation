@@ -14,5 +14,9 @@ def about():
 def restaurants():
     return render_template("/restaurants.html")
 
+@app.route("/maptest")
+def maptest():
+    return render_template("/maptest.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
