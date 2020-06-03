@@ -158,18 +158,9 @@ body {
 
 /*Setting 6 initial columns spaced 20px apart and centered on page*/
 .column {
-    width: 14%;
+    width: 30%;
     padding: 10px 10px;
     margin: auto;
-}
-
-/*When screen shrinks, have elements per row drop to 3*/
-@media screen and (max-width: 960px) {
-    .column {
-        width: 30%;
-        display: block;
-        margin-bottom: 20px;
-    }
 }
 
 /* Style the cards and have words break if too long*/
