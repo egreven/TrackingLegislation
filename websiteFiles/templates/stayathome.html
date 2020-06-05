@@ -1,0 +1,239 @@
+{% extends "homepage.html" %}
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/*Center the Header atop the page, color the background and words*/
+.header {
+  padding: 80px;
+  text-align: center;
+  background: gray;
+  color: white;
+}
+
+/*Style the website logo size*/
+.header h1 {
+  font-size: 40px;
+}
+
+/*Make the content area "fit" below the header and above the footer*/
+.content-area{
+    margin: 10px;
+  }
+
+/*Fit the navbar to screen and center links*/
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  margin: auto;
+  text-align: center;
+}
+
+/*Style navbar links*/
+.navbar a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+
+/*Change navbar buttons when hover*/
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*For desktop screens, only display navbar, disable sidenav*/
+@media screen and (min-width: 601px) {
+    #sidenavButton {
+      display: none;
+    }
+    
+    .sidenav{
+      display: none; 
+    }
+    }
+
+/*For mobile screens, disable navbar and enable sidenav with toggle button*/
+
+@media screen and (max-width: 600px) {
+  
+  .navbar{
+    display: none;
+  } 
+  
+  /*Style the sidnav to fit on the side of the screen*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+  
+/*Style the title to be at the top of the sidenav*/
+  .sidenav .title{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  }
+  
+  /*Move the links of the sidenav to be considerably below the title*/
+  .sidenav .links{
+    padding-top: 30px;
+  }
+  
+  /*Space out and color the links*/
+.sidenav .links a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/*Have the links change style when hovering*/
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/*Create a close button at top right of menu, add transition to close menu*/
+.sidenav .closebtn {
+  position: absolute;
+  color: #f1f1f1;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  transition: margin-right .5s;
+  padding: 16px;
+}
+
+/*Add a transition to smoothly open the menu*/
+#sidenavButton {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+}
+/* Create two equal columns that floats next to each other */
+	.row {
+  display: table;
+  width: 100%;
+}
+.column {
+	display: table-cell;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 50px;
+ 
+}
+	.column h2{
+		font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		color: #717070;
+	font-size: 28px;
+	}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.export {
+  background-color: #1D1D1D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+}
+
+	.export:hover{
+		background-color:#7B7B7B; 
+	}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+	}
+/*Center and style the footer*/
+.footer {
+   
+ padding: 20px;
+    text-align: center;
+    background: #ddd;
+    position: relative;
+   text-align: center;
+  }
+
+
+
+
+
+
+  /*Create a button at the bottom right of the div*/
+  .button {
+    position:absolute;
+    bottom: 10px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: gray;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /*change button color when hovering*/
+  .button:hover {
+    background-color:black;
+  }
+  
+  </style>
+{% block head %}
+    <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+    <title> About Page Website Test for Project 26</title> 
+{% endblock %}
+   
+{% block body %}
+    <!--Begin content area-->
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Stay At Home Order</h2>
+    <iframe src="https://arcg.is/1uWmHu" width="75%" height="560"  > </iframe>
+	 <button class="export" type="submit">Export</button>
+
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Religious Gathering Exemption Without Clear Social Distance Mandate</h2>
+    <iframe src="https://arcg.is/1uWmHu" width="75%" height="560"  > </iframe>
+	  <button class="export" type="submit">Export</button>
+  </div>
+</div>
+{% endblock %}
