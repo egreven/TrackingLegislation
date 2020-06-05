@@ -11,7 +11,7 @@ body {
 .header {
     padding: 80px;
     text-align: center;
-    background: red;
+    background: #CC0000;
     color: white;
 }
 
@@ -28,7 +28,7 @@ body {
 /*Fit the navbar to screen and center links*/
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #2D2926;
     margin: auto;
     text-align: center;
 }
@@ -73,7 +73,7 @@ body {
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #111;
+        background-color: #2D2926;
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 10px;
@@ -83,9 +83,12 @@ body {
     /*Style the title to be at the top of the sidenav*/
     .sidenav .title{
         padding: 8px 8px 8px 32px;
+        max-width: 300px;
+        overflow-wrap: breakword;
+        whitespace: initial;
         text-decoration: none;
         font-size: 25px;
-        color: #818181;
+        color: #fff;
         display: block;
         transition: 0.3s;
     }
@@ -101,26 +104,33 @@ body {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
-        color: #818181;
+        color: #fff;
         display: block;
         transition: 0.3s;
     }
 
     /*Have the links change style when hovering*/
     .sidenav a:hover {
-        color: #f1f1f1;
+        color: #CC0000;
     }
 
     /*Create a close button at top right of menu, add transition to close menu*/
     .sidenav .closebtn {
-        position: absolute;
-        color: #f1f1f1;
+        padding: 80px;
+        float: right;
+        color: #fff;
+        text-decoration: none;
         top: 0;
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
         transition: margin-right .5s;
         padding: 16px;
+    }
+  
+   .sidenav .closebtn:hover {
+    text-decoration: underline;
+     color: #CC0000;
     }
 
     /*Add a transition to smoothly open the menu*/
@@ -133,8 +143,9 @@ body {
 /*Center and style the footer*/
 .footer {
     padding: 20px;
+    height: 100px;
     text-align: center;
-    background: #ddd;
+    background: #2D2926;
     position: relative;
 }
 
@@ -143,6 +154,11 @@ body {
     background-color: #aaa;
     padding: 20px;
     text-align: center;
+}
+
+.placeholder img{
+  width: 100%;
+  height: auto;
 }
 
 /*Setting the card rows to be centered and responsive*/
@@ -161,14 +177,21 @@ body {
     margin: auto;
 }
 
+.column a{
+  color: white;
+}
+
 /* Style the cards and have words break if too long*/
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #CC0000;
     word-wrap: break-word;
+    color: white;
 }
+
+
 
 /*Create a button at the bottom right of the div*/
 .button {
@@ -176,7 +199,7 @@ body {
     bottom: 10px;
     right: 30px;
     padding: 10px 20px;
-    background-color: gray;
+    background-color: #CC0000;
     border: 1px solid #ddd;
     color: white; 
     cursor: pointer;
