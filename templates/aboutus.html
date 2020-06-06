@@ -1,0 +1,31 @@
+{% extends "homepage.html" %}
+{% block head %}
+<html lang="en">
+<head>
+    <link href="/static/css/aboutus.css" type="text/css" rel="stylesheet">
+    <title> About Tracking Legislation</title> 
+{% endblock %}
+</head>
+<body>      
+    {% block body %}
+    <!--Begin content area-->
+    <div class = content-area>
+
+        <!--Element for biographies about the team and Dr. Raifman, etc-->
+        <div class="People">
+            <div class="thumbnail" style="height:200px;">Headshot of Dr. Raifman</div>
+            <img src="https://www.bu.edu/sph/files/2017/08/Julia-Raifman-2.jpg"/>
+            <div class="biography">
+                Julia Raifman, ScD, SM conducts research on health and social policy 
+                drivers of population health and health inequities. Dr. Raifman focuses 
+                her work on mental health and infectious diseases. Dr. Raifman’s research
+                 has been covered in the New York Times, The Guardian, National Public Radio, 
+                 and The Advocate. Dr. Raifman received her doctoral and masters degree from the 
+                 Harvard T.H. Chan School of Public Health and completed a post-doctoral fellowship at 
+                 Johns Hopkins prior to joining Boston University.
+            </div>
+        </div>  
+    </div>
+    {% endblock %}
+</body>
+</html>
